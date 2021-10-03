@@ -3,12 +3,12 @@
 
 int main()
 {
-  int *p = (int )malloc(sizeof(int)*2);
+  int *p = (int *)malloc(sizeof(int)*2);
   int i;
   int *p_new;
   *p = 15;
   *(p + 1) = 25;
-  p_new = (int )realloc(p, sizeof(int)*3);
+  p_new = (int *)realloc(p, sizeof(int)*3);
   *(p_new + 2) = 35;
   for(i = 0; i < 3; i++)
 	printf("%d ", *(p_new + i));
