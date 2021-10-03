@@ -7,6 +7,11 @@ int main()
   printf("Enter the Integer: ");
   p = (int *)malloc(sizeof(int));
   scanf("%d", p);
+  if(p == NULL)
+  {
+    printf("Memory not available\n");
+    exit(1);
+  }
   printf("Address = %d    Integer = %u", *p, p);
   return 0;
 }
